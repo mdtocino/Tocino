@@ -17,7 +17,7 @@ public class SignupPanel extends JPanel {
     private Color YELLOW_ACCENT = new Color(255, 193, 7);
     private Color BG_LIGHT = new Color(248, 245, 250);
 
-    public JTextField txtName, txtEmail, txtPhone, txtAddress;
+    public JTextField txtName, txtEmail, txtPhone, txtAddress, txtUser;
     public JPasswordField txtPassword, txtConfirmPassword;
     public JCheckBox chkSavePassword;
     public JButton btnRegister, btnAlreadyHaveAccount;
@@ -53,58 +53,68 @@ public class SignupPanel extends JPanel {
         lblSignupTitle.setForeground(PURPLE_DARK);
         lblSignupTitle.setBounds(60, 30, 400, 40);
         rightPanelSignup.add(lblSignupTitle);
-
+        
+        
         JLabel lblName = new JLabel("Full Name");
         lblName.setBounds(60, 80, 380, 20);
         txtName = new JTextField();
-        txtName.setBounds(60, 102, 380, 35);
+        txtName.setBounds(60, 164, 380, 35);
         rightPanelSignup.add(lblName);
         rightPanelSignup.add(txtName);
 
+
+        JLabel lblUser = new JLabel("Username");
+        lblUser.setBounds(60, 142, 380, 20);
+        txtUser = new JTextField();
+        txtUser.setBounds(60, 102, 380, 35);
+        rightPanelSignup.add(lblUser);
+        rightPanelSignup.add(txtUser);
+        
+        
         JLabel lblEmail = new JLabel("Email Address (@gmail.com)");
-        lblEmail.setBounds(60, 142, 380, 20);
+        lblEmail.setBounds(60, 204, 380, 20);
         txtEmail = new JTextField();
-        txtEmail.setBounds(60, 164, 380, 35);
+        txtEmail.setBounds(60, 226, 380, 35);
         rightPanelSignup.add(lblEmail);
         rightPanelSignup.add(txtEmail);
 
         JLabel lblPhone = new JLabel("Phone Number (11 digits, e.g., 09123456789)");
-        lblPhone.setBounds(60, 204, 380, 20);
+        lblPhone.setBounds(60, 266, 380, 20);
         txtPhone = new JTextField();
-        txtPhone.setBounds(60, 226, 380, 35);
+        txtPhone.setBounds(60, 288, 380, 35);
         rightPanelSignup.add(lblPhone);
         rightPanelSignup.add(txtPhone);
         
         JLabel lblAddress = new JLabel("Address");
-        lblAddress.setBounds(60, 266, 380, 20);
+        lblAddress.setBounds(60, 328, 380, 20);
 
         txtAddress = new JTextField();            // ✅ create it
-        txtAddress.setBounds(60, 288, 380, 35);   // ✅ give it its own spot
+        txtAddress.setBounds(60, 350, 380, 35);   // ✅ give it its own spot
 
         rightPanelSignup.add(lblAddress);
         rightPanelSignup.add(txtAddress);
 
         JLabel lblPassword = new JLabel("Password");
-        lblPassword.setBounds(60, 328, 380, 20);
+        lblPassword.setBounds(60, 390, 380, 20);
         txtPassword = new JPasswordField();
         JPanel passPanelSignup = createPasswordFieldWithEye(txtPassword);
-        passPanelSignup.setBounds(60, 350, 380, 35);
+        passPanelSignup.setBounds(60, 412, 380, 35);
         rightPanelSignup.add(lblPassword);
         rightPanelSignup.add(passPanelSignup);
 
         JLabel lblConfirmPassword = new JLabel("Confirm Password");
-        lblConfirmPassword.setBounds(60, 390, 380, 20);
+        lblConfirmPassword.setBounds(60, 452, 380, 20);
         txtConfirmPassword = new JPasswordField();
         
         JPanel confirmPassPanelSignup = createPasswordFieldWithEye(txtConfirmPassword);
-        confirmPassPanelSignup.setBounds(60, 412, 380, 35);
+        confirmPassPanelSignup.setBounds(60, 470, 380, 35);
         rightPanelSignup.add(lblConfirmPassword);
         rightPanelSignup.add(confirmPassPanelSignup);
 
         chkSavePassword = new JCheckBox("Save Password");
         chkSavePassword.setFont(new Font("Segoe UI", Font.PLAIN, 12));
         chkSavePassword.setBackground(BG_LIGHT);
-        chkSavePassword.setBounds(60, 455, 150, 20);
+        chkSavePassword.setBounds(60, 510, 150, 20);
         chkSavePassword.setFocusPainted(false);
         rightPanelSignup.add(chkSavePassword);
 
@@ -113,7 +123,7 @@ public class SignupPanel extends JPanel {
         btnRegister.setBackground(PURPLE_DARK);
         btnRegister.setForeground(Color.WHITE);
         btnRegister.setFocusPainted(false);
-        btnRegister.setBounds(60, 490, 380, 45);
+        btnRegister.setBounds(60, 530, 380, 45);
         btnRegister.addActionListener(listener);
         rightPanelSignup.add(btnRegister);
 
@@ -124,7 +134,7 @@ public class SignupPanel extends JPanel {
         btnAlreadyHaveAccount.setBorderPainted(false);
         btnAlreadyHaveAccount.setFocusPainted(false);
         btnAlreadyHaveAccount.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        btnAlreadyHaveAccount.setBounds(60, 545, 380, 30);
+        btnAlreadyHaveAccount.setBounds(60, 585, 380, 30);
         btnAlreadyHaveAccount.addActionListener(listener);
         rightPanelSignup.add(btnAlreadyHaveAccount);
 
