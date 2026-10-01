@@ -88,8 +88,8 @@ public class SignupPanel extends JPanel {
         JLabel lblAddress = new JLabel("Address");
         lblAddress.setBounds(60, 328, 380, 20);
 
-        txtAddress = new JTextField();            // ✅ create it
-        txtAddress.setBounds(60, 350, 380, 35);   // ✅ give it its own spot
+        txtAddress = new JTextField();            
+        txtAddress.setBounds(60, 288, 380, 35);   
 
         rightPanelSignup.add(lblAddress);
         rightPanelSignup.add(txtAddress);
@@ -157,7 +157,7 @@ public class SignupPanel extends JPanel {
         btnEye.setBorderPainted(false);
         btnEye.setFocusPainted(false);
         btnEye.setCursor(new Cursor(Cursor.HAND_CURSOR));
-// here
+
         btnEye.addActionListener(e -> {
             if (btnEye.isSelected()) {
                 passField.setEchoChar((char) 0);
